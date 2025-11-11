@@ -1,0 +1,403 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Essam Maged Elhosseny - Civil Engineer CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9fafb;
+    }
+
+    .cv-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: white;
+      padding: 2.5rem 2rem 2rem;
+      position: relative;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .name {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      padding: 1.75rem 2rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .section-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .summary p {
+      font-size: 1.05rem;
+      color: #4b5563;
+    }
+
+    .education-item, .experience-item, .course-item, .volunteer-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+
+    .item-title {
+      font-weight: 600;
+      font-size: 1.125rem;
+      color: #1f2937;
+    }
+
+    .item-subtitle {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .item-date {
+      background: #e0e7ff;
+      color: #312e81;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .item-location {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+
+    .responsibilities {
+      margin-top: 0.75rem;
+      padding-left: 1.25rem;
+    }
+
+    .responsibilities li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .project-list {
+      margin-top: 0.75rem;
+      padding-left: 1.25rem;
+    }
+
+    .project-item {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-category {
+      margin-bottom: 1rem;
+    }
+
+    .skill-category-title {
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: #f3f4f6;
+      padding: 0.375rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      color: #374151;
+    }
+
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .language-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .language-name {
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .language-level {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      .cv-container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .item-date {
+        align-self: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <header>
+      <div class="header-content">
+        <h1 class="name">Essam Maged Elhosseny</h1>
+        <div class="title">Civil Engineer | Technical Office Specialist</div>
+        <div class="contact-info">
+          <div class="contact-item">📍 Helwan, Cairo, Egypt</div>
+          <div class="contact-item">📞 +20 01015431069</div>
+          <div class="contact-item">✉️ esammaged5000@gmail.com</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section summary">
+      <h2 class="section-title">Summary</h2>
+      <p>Civil Engineer with 2 years of experience as a Technical Office Engineer. Aiming to expand my experience by working on large-scale projects within your organization, contributing to my professional growth.</p>
+    </section>
+
+    <section class="section education">
+      <h2 class="section-title">Education</h2>
+      <div class="education-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Bachelor’s Degree in Civil Engineering</div>
+            <div class="item-subtitle">Faculty of Engineering, Ain-Shams University</div>
+          </div>
+          <div class="item-date">Jul 2017 – Jun 2022</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience">
+      <h2 class="section-title">Work Experience</h2>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Technical Office Engineer</div>
+            <div class="item-subtitle">Geotech-EG</div>
+            <div class="item-location">SWAN Lake, North Coast</div>
+          </div>
+          <div class="item-date">May 2024 – Mar 2025</div>
+        </div>
+        <ul class="responsibilities">
+          <li>Prepare and review structural shop drawings and as-built drawings.</li>
+          <li>Monitor drawing revisions and manage drawing logs.</li>
+          <li>Coordinate with the Consultant in all phases of the project.</li>
+          <li>Assist in preparing technical submittals, RFIs, and method statements.</li>
+          <li>Conduct quantity take-offs and assist in preparing BOQs.</li>
+          <li>Participate on-site and provide technical support as required.</li>
+          <li>Maintain documentation per company standards.</li>
+        </ul>
+        <div><strong>Developer:</strong> Hassan Allam Properties (HAP) | <strong>Consultant:</strong> ACE Moharram-Bakhoum | <strong>Structural System:</strong> Keystone Retaining Walls</div>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Supervising Officer</div>
+            <div class="item-subtitle">Armed Forces Engineering Authority</div>
+            <div class="item-location">Kafr El-Dawwar Bridges, Beheira</div>
+          </div>
+          <div class="item-date">Apr 2025 – Present</div>
+        </div>
+        <ul class="responsibilities">
+          <li>Supervising project implementation works.</li>
+          <li>Preparing daily reports for the owner on project implementation and following up on the time plan.</li>
+          <li>Supervising the work of the technical office and controlling documents.</li>
+        </ul>
+        <div><strong>Project Scope:</strong> Three bridges and one bridge removal</div>
+        <ul class="project-list">
+          <li><strong>Bridge Removal</strong> — Contractor: Almotaheda Co. | Consultant: AACE</li>
+          <li><strong>Bridge (1)</strong> — Contractor: Almotaheda Co. | Consultant: AACE | Systems: Prestressed beams, S.O.P, Box sections</li>
+          <li><strong>Bridge (2)</strong> — Contractor: Almotaheda Co. | Consultant: El RAEID | Systems: Precast beams, S.O.P</li>
+          <li><strong>Bridge (3)</strong> — Contractor: Almotaheda Co. | Consultant: El RAEID | Systems: Steel beams</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Supervising Officer</div>
+            <div class="item-subtitle">Armed Forces Engineering Authority</div>
+            <div class="item-location">Abu Zekry Bridges, North Coast</div>
+          </div>
+          <div class="item-date">Dec 2023 – Apr 2024</div>
+        </div>
+        <ul class="responsibilities">
+          <li>Supervising project implementation works.</li>
+          <li>Preparing daily reports for the owner on project implementation and following up on the time plan.</li>
+          <li>Supervising the work of the technical office and controlling documents.</li>
+        </ul>
+        <div><strong>Project Scope:</strong> Four bridges</div>
+        <ul class="project-list">
+          <li><strong>Bridge (B)</strong> — Contractor: Almotaheda Co. | Consultant: El RAEID | Systems: Precast beams, Prestressed beams, Box sections</li>
+          <li><strong>Bridge (C)</strong> — Contractor: ECC | Consultant: El RAEID | Systems: Precast beams, Prestressed beams</li>
+          <li><strong>Bridge (D)</strong> — Contractor: Kased Khair | Consultant: El RAEID | Systems: Precast beams, Steel beams, Box sections</li>
+          <li><strong>Bridge (E)</strong> — Contractor: El Soadaa Group | Consultant: El RAEID | Systems: Precast beams, Steel beams, Box sections</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section courses">
+      <h2 class="section-title">Courses</h2>
+      <div class="course-item">
+        <div class="item-title">Structural Design Diploma</div>
+      </div>
+      <div class="course-item">
+        <div class="item-title">Technical Office Diploma</div>
+      </div>
+      <div class="course-item">
+        <div class="item-title">Shop Drawing Diploma</div>
+      </div>
+    </section>
+
+    <section class="section volunteer">
+      <h2 class="section-title">Volunteer Experience</h2>
+      <div class="volunteer-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Multimedia Vice-head</div>
+            <div class="item-subtitle">Resala Charity Organization</div>
+          </div>
+          <div class="item-date">Jan 2021 – May 2023</div>
+        </div>
+      </div>
+      <div class="volunteer-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Volunteer</div>
+            <div class="item-subtitle">Connected Family (Ain-Shams University)</div>
+          </div>
+          <div class="item-date">Sep 2018 – Jun 2020</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills">
+      <h2 class="section-title">Skills & Languages</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-title">Software Skills</div>
+          <div class="skill-list">
+            <span class="skill-tag">AutoCAD</span>
+            <span class="skill-tag">ASD</span>
+            <span class="skill-tag">Microsoft Office</span>
+            <span class="skill-tag">SketchUp</span>
+            <span class="skill-tag">Photoshop</span>
+            <span class="skill-tag">Illustrator</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Languages</div>
+          <div class="languages-grid">
+            <div class="language-item">
+              <div class="language-name">Arabic</div>
+              <div class="language-level">Native</div>
+            </div>
+            <div class="language-item">
+              <div class="language-name">English</div>
+              <div class="language-level">Limited Working Proficiency</div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Other Information</div>
+          <div class="skill-list">
+            <span class="skill-tag">Military Service: Fulfilled</span>
+            <span class="skill-tag">Marital Status: Single</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
+```
